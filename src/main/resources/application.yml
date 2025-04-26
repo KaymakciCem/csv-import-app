@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: "csv-import-app"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tedtalks
+    driver-class-name: org.postgresql.Driver
+    username: "root"
+    password: "root"
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: true
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+logging:
+  level:
+    org:
+      hibernate:
+        stat: debug
